@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --bg: #1e2021;
+    --orange:rgba(255,130,130,1);
+    --pinky2:rgba(225,120,237,1);
+    --pinky2-hover: rgb(208, 145, 214);
+    --gradient:  linear-gradient(90deg, var(--pinky) 0%, var(--pinky2) 100%);
+    --gradientInverted:  linear-gradient(90deg, var(--pinky2) 0%, var(--pinky) 100%);
+    --gradientY:  linear-gradient(var(--pinky) 0%, var(--pinky2) 100%);
+}
+
+body{
+    background-color: var(--bg);
+    height: 100%;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    color: white;
+}
+
+
+/* NAV BAR */
+
