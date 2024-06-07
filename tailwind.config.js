@@ -7,9 +7,9 @@ export default {
     extend: {
       colors: {
         bg: '#1e2021',
-        orange: 'rgba(255,130,130,1)',
         pinky2: 'rgba(225,120,237,1)',
-        'pinky2-hover': 'rgb(208, 145, 214)',
+        pinky2hover: 'rgb(208, 145, 214)',
+        pinky: 'rgba(255,130,130,1)'
     },
     },
   },

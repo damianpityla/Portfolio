@@ -1,7 +1,7 @@
-// import React from 'react';
+import React, { useState, useEffect, useRef} from 'react';
 
 import Navbar from './components/Navbar';
-
+import Mant from './components/Mant'
 import Home from './components/Home';
 // import About from './components/About';
 // import Projects from './components/Projects';
@@ -10,11 +10,36 @@ import Home from './components/Home';
 // import Footer from './components/Footer';
 
 function App() {
+    const[renderContent, setRenderContent] = useState(false);
+    const nodeRef = useRef(null);
+
+    const handleScroll = () => {
+        if (window.scrollY > 0) {
+          setRenderContent(true);
+        } else {
+          setRenderContent(false);
+        }
+      };
+    const handleLinkClick = (e) => {
+      setRenderContent(true);
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
+
+
     return (
         <div>
             <Navbar />
             <Home />
-            {/* <About />
+            {renderContent && (<Mant/>)}
+            <footer id='destino' className=""></footer>
+            {/*<About />
             <Projects />
             <Skills />
             <Contact />

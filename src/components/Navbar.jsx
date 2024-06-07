@@ -1,26 +1,33 @@
-const NavBar = () => {
-    const HeaderClasses = "h-16 navbar flex items-center justify-between w-full max-w-full py-5 px-5 border-b-2 border-pinky2 fixed top-0";
-    const buttonClasses = "hover:text-pinky2 text-white p-2 rounded transition-color duration-200 delay-100 mr-10";
-    return (
-        <header className={HeaderClasses}>
-            {/* Contenedor para el logo */}
-            <div className="navbar-logo">
-                <img src="ruta-a-tu-logo.png" alt="Logo" />
-            </div>
+import { FaFaceSmileWink } from "react-icons/fa6";
+import { gradientText } from "../logica/constants.js";
+import Button from './Button.jsx'
 
-            {/* Contenedor para los botones */}
-            <nav className="navbar-links">
-                <button className={buttonClasses}>
-                    Button
-                </button>
-                <button className={buttonClasses}>
-                    Sobre mí
-                </button>
-                <button className={buttonClasses}>
-                    Contacto
-                </button>
-            </nav>
-        </header>
-    );
-}
+
+  // Función para manejar el desplazamiento
+    const handleScroll = () => {
+    // Calcula la cantidad de píxeles equivalente a 1.5 rem
+    const rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const scrollAmount = 1.5 * rootFontSize;
+    window.scrollBy({ top: scrollAmount, behavior: 'smooth' });
+    }
+    const HeaderClasses = "h-16 navbar flex items-center justify-between w-full max-w-full py-5 px-5 border-b-2 border-pinky2 fixed top-0";
+    const NavBar = () => {
+        return (
+            <>
+                <header className={HeaderClasses}>
+                    {/* Contenedor para el logo */}
+                    <div className="navbar-logo">
+                        <a   href=""></a><span className={`${gradientText} font-bold cursor-pointer`}>DamCode</span>
+                    </div>
+
+                    {/* Contenedor para los botones */}
+                    <nav className="navbar-links">
+                        <a href="#destino"><Button onClick={handleScroll}>Acerca de Mi</Button></a>
+                        <a href="#destino"><Button onClick={handleScroll}>Proyectos</Button></a>
+                        <a href="#destino"><Button onClick={handleScroll}>Contacto</Button></a>
+                    </nav>
+                </header>
+
+            </>
+        );}
 export default NavBar;

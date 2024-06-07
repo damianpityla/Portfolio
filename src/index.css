@@ -7,9 +7,11 @@
     --orange:rgba(255,130,130,1);
     --pinky2:rgba(225,120,237,1);
     --pinky2-hover: rgb(208, 145, 214);
+    --pinky: rgba(255,130,130,1);
     --gradient:  linear-gradient(90deg, var(--pinky) 0%, var(--pinky2) 100%);
     --gradientInverted:  linear-gradient(90deg, var(--pinky2) 0%, var(--pinky) 100%);
     --gradientY:  linear-gradient(var(--pinky) 0%, var(--pinky2) 100%);
+    --bg-hover: #323536;
 }
 
 body{
@@ -23,5 +25,54 @@ body{
 }
 
 
+
 /* NAV BAR */
 
+
+.logo img{
+    height: 122%;
+    transform: translate(20px);
+}
+.logo{
+
+    background: var(--gradient);
+    height: 370px;
+    min-width: 320px;
+    border: 1px solid var(--pinky2);
+    overflow: hidden;
+    animation: profile 11s ease-in-out infinite 0s;
+    background: var(--gradient); 
+}
+@keyframes profile{
+    0%{
+        border-radius: 70% 50% 40% 80%/70% 40% 80% 50%;
+    }
+
+    50%{
+        border-radius: 50% 70% 80% 50%/60% 70% 40% 70%;
+    }
+    
+    100%{
+        border-radius: 70% 50% 40% 80%/70% 40% 80% 50%;
+    }
+}
+
+
+
+  .pop-up .text {  
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    padding: 25px;
+    background: var(--bg);
+    width: 40%;
+    border: 2px solid var(--pinky2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 20px; */
+  }
