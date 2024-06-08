@@ -22,9 +22,9 @@ import Button from './Button.jsx'
 
                     {/* Contenedor para los botones */}
                     <nav className="navbar-links">
-                        <a href="#destino"><Button onClick={handleScroll}>Acerca de Mi</Button></a>
-                        <a href="#destino"><Button onClick={handleScroll}>Proyectos</Button></a>
-                        <a href="#destino"><Button onClick={handleScroll}>Contacto</Button></a>
+                        <a href="#destino" className="scroll-smooth"><Button onClick={handleScroll}>Acerca de Mi</Button></a>
+                        <a href="#destino" className="scroll-smooth"><Button onClick={handleScroll}>Proyectos</Button></a>
+                        <a href="#destino" className="scroll-smooth"><Button onClick={handleScroll}>Contacto</Button></a>
                     </nav>
                 </header>
 
