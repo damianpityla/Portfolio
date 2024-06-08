@@ -1,7 +1,7 @@
 {
   "name": "portfolioreact",
   "private": true,
-  "homepage": "https://{tu-usuario}.github.io/{nombre-del-repositorio}",
+  "homepage": "https://damianpityla.github.io/Portfolio",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
