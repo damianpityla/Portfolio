@@ -38,7 +38,7 @@ function App() {
             <Navbar />
             <Home />
             {renderContent && (<Mant/>)}
-            <footer id='destino' className="end"></footer>
+            <footer id='destino' className="end mt-5"></footer>
             {/*<About />
             <Projects />
             <Skills />

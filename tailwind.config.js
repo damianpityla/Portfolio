@@ -10,7 +10,9 @@ export default {
         pinky2: 'rgba(225,120,237,1)',
         pinky2hover: 'rgb(208, 145, 214)',
         pinky: 'rgba(255,130,130,1)'
-    },
+      },screens: {
+        'xsm': '800px',
+      }
     },
   },
   plugins: [],

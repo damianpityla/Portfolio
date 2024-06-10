@@ -5,9 +5,9 @@ import React, {Children, useState} from 'react';
 
 
 
-const Button = ({children}) => {
+const Button = ({children, inNav}) => {
   const animation = "transition-all duration-300 ease-in-out"
-  const initialClasses = "p-2 mr-10";
+  const initialClasses = inNav ? "p-2 mr-10" : "p-2";
   const [buttonClasses, setButtonClasses] = useState(initialClasses)
 
   const handleHoverEnter = () => {

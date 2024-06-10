@@ -36,8 +36,8 @@ body{
 .logo{
 
     background: var(--gradient);
-    height: 370px;
-    min-width: 320px;
+    /* height: 370px;
+    min-width: 320px; */
     border: 1px solid var(--pinky2);
     overflow: hidden;
     animation: profile 11s ease-in-out infinite 0s;
@@ -67,7 +67,7 @@ body{
     z-index: 9999;
     padding: 25px;
     background: var(--bg);
-    width: 40%;
+    
     border: 2px solid var(--pinky2);
     border-radius: 10px;
     display: flex;
@@ -75,4 +75,25 @@ body{
     justify-content: center;
     align-items: center;
     /* gap: 20px; */
+  }
+
+  ::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-left: 1px solid var(--pinky2);
+    
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--pinky2);
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--pinky2-hover);
   }
