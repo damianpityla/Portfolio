@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { gradientText } from "../logica/constants.js";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
@@ -11,7 +11,19 @@ import NavLinks from "./NavLinks.jsx";
         const handleButton = () =>{
             setIsOpen(!isOpen)
         }
-        const borderHandler = isOpen ? "border-none": ""
+        const [isScreenXsm, setIsScreenXsm] = useState(window.innerWidth < 800)
+        useEffect(() => {
+            const handleResize = () => {
+                setIsScreenXsm(window.innerWidth < 800);
+            };
+    
+            window.addEventListener('resize', handleResize);
+    
+            return () => {
+                window.removeEventListener('resize', handleResize);
+            };
+        }, []);
+        const borderHandler = isOpen && isScreenXsm ? "border-none": ""
         
         const color = "text-pinky2"
         const hoverSocialMedia = "hover:text-pinky transition ease-in-out duration-300 transform"
@@ -27,7 +39,7 @@ import NavLinks from "./NavLinks.jsx";
                         <div className="menuBtn xsm:hidden justify-center flex">
                             <button onClick={handleButton}>{isOpen ? <IoMdClose className={`${color} ${hoverSocialMedia} `}/> : <GiHamburgerMenu className={`${color} ${hoverSocialMedia}`}/> }</button>
                         </div>  
-                        {isOpen && (
+                        {isOpen && isScreenXsm && (
                             <div className="w-full left-0 pleft absolute top-16 flex flex-col text-center border-b-2 border-pinky2 bg-bg">
                                 <NavLinks inNav={false}/>
                             </div>

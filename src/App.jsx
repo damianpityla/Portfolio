@@ -11,7 +11,6 @@ import Home from './components/Home';
 
 function App() {
     const[renderContent, setRenderContent] = useState(false);
-    const nodeRef = useRef(null);
 
     const handleScroll = () => {
         if (window.scrollY > 0) {
@@ -20,9 +19,6 @@ function App() {
           setRenderContent(false);
         }
       };
-    const handleLinkClick = (e) => {
-      setRenderContent(true);
-    };
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
