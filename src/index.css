@@ -4,6 +4,7 @@
 
 :root{
     --bg: #1e2021;
+    --bg2: #292929;
     --orange:rgba(255,130,130,1);
     --pinky2:rgba(225,120,237,1);
     --pinky2-hover: rgb(208, 145, 214);
@@ -66,8 +67,7 @@ body{
     transform: translate(-50%, -50%);
     z-index: 9999;
     padding: 25px;
-    background: var(--bg);
-    
+    background: var(--bg2);
     border: 2px solid var(--pinky2);
     border-radius: 10px;
     display: flex;

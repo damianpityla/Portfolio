@@ -5,7 +5,7 @@ import { IoMdClose } from "react-icons/io";
 import NavLinks from "./NavLinks.jsx";
 
 
-    const navClasses = "h-16 navbar flex items-center justify-between w-full max-w-full py-5 px-5 border-b-2 border-pinky2 fixed top-0 z-20";
+    const navClasses = "h-16 navbar flex items-center justify-between w-full max-w-full py-5 px-5 border-b-2 border-pinky2 bg-bg fixed top-0 z-20";
     const NavBar = () => {
         const [isOpen, setIsOpen] = useState(false)
         const handleButton = () =>{
